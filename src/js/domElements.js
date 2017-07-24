@@ -1,3 +1,1 @@
-export const domElements = {
-    playground: document.querySelector('.playground'),
-};
+export const playground = document.querySelector('.playground');

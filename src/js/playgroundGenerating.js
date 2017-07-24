@@ -1,4 +1,5 @@
-import {domElements} from './domElements';
+import {playground} from './domElements';
+import {move} from './gameplay';
 export {
     startNewGame
 }
@@ -6,7 +7,7 @@ export {
 const size = 9;
 
 function startNewGame(){
-    domElements.playground.innerHTML = '';
+    playground.innerHTML = '';
     generatePlayground();
 }
 
@@ -14,7 +15,7 @@ function generatePlayground(){
     const orderedNums = randomizer(size);
     let template = '';
     orderedNums.forEach(item => template += card(item));
-    domElements.playground.insertAdjacentHTML("beforeend", template);
+    playground.insertAdjacentHTML("beforeend", template);
 }
 
 function randomizer(n){
@@ -26,6 +27,6 @@ const card = num => {
     if (num === 0){
         return `<div class="card empty"></div>`
     }else {
-        return `<div class="card number"><p>${num}</p></div>`
+        return `<div class="card number" id=${num}><p>${num}</p></div>`
     }
 }

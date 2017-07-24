@@ -10,7 +10,7 @@ module.exports  = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/assets', 
+        publicPath: '/assets/', 
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'src'),
@@ -34,5 +34,6 @@ module.exports  = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
+        new ExtractTextPlugin("manifest.json"),
   ]
 };

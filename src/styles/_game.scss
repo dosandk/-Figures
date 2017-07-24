@@ -27,6 +27,8 @@
     margin-top: 10%;
     margin-left: 20px;
     width: calc(100vw - 40px);
+
+    position: relative;
 }
 
 .card {
@@ -47,4 +49,8 @@
     p {
         padding: 30% 0;
     } 
+}
+
+.draggable {
+    position: absolute;
 }
