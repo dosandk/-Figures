@@ -30,27 +30,36 @@
 
     position: relative;
 }
-
-.card {
-    box-sizing: border-box;
-    font-size: 30px;
-    height: 31%;
-    text-align: center;
-    width: 31%;
+.cell {
+   height: 31%; 
+   width: 31%;
+   position: relative;
 }
-
-.number {
+.card {
     background-image: url('./pics/card-bg.png');
     border: 3px solid $playground-border-color;
     border-radius: 15%;
-    font-family: 'Gorditas', cursive;
+    box-sizing: border-box;
     color: $text-color;
+    font-family: $font-family;
+    font-size: 30px;
+    height: 100%;
+    padding: 30% 0; 
+    text-align: center;
     text-shadow: 0 0 10px $text-shadow-color;
-    p {
-        padding: 30% 0;
-    } 
+    width: 100%;   
 }
 
 .draggable {
     position: absolute;
+    z-index: 100;
+}
+
+.game-end-popup {
+    @extend .draggable;
+    color: $text-color;
+    font-family: $font-family;
+    font-size: 40px;
+    text-shadow: 0 0 10px $text-shadow-color;
+    top: 40%;
 }

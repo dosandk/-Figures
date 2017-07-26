@@ -1,10 +1,8 @@
 import {playground} from './domElements';
-import {move} from './gameplay';
-export {
-    startNewGame
-}
+import './gameplay';
 
 const size = 9;
+let initialArr = [];
 
 function startNewGame(){
     playground.innerHTML = '';
@@ -12,9 +10,9 @@ function startNewGame(){
 }
 
 function generatePlayground(){
-    const orderedNums = randomizer(size);
     let template = '';
-    orderedNums.forEach(item => template += card(item));
+    initialArr = randomizer(size);
+    initialArr.forEach((item, i) => template += card(item, i));
     playground.insertAdjacentHTML("beforeend", template);
 }
 
@@ -23,10 +21,15 @@ function randomizer(n){
     return arr.sort((a, b) => Math.random() - 0.5);
 }
 
-const card = num => {
+const card = (num, index)=> {
     if (num === 0){
-        return `<div class="card empty"></div>`
+        return `<div class="cell" id="cell-${index+1}"></div>`
     }else {
-        return `<div class="card number" id=${num}><p>${num}</p></div>`
+        return `<div class="cell" id="cell-${index+1}"><div class="card" id=${num}>${num}</div></div>`
     }
+}
+
+export {
+    startNewGame,
+    initialArr
 }
