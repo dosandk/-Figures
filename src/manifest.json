@@ -1,0 +1,15 @@
+{
+    "short_name": "Figures",
+    "name": "Figures Game",
+    "display": "standalone",
+    "background_color": "#6ee8fb",
+    "start_url": ".",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./pics/logo.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ]
+}
