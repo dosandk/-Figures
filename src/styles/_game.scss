@@ -12,12 +12,18 @@
     padding-top: 10%;
     text-align: center;
     text-shadow: 0 0 10px $text-shadow-color;
+    user-select: none;
+
+    @media screen and (max-height: 500px) {
+        font-size: 30px;
+        padding-top: 5%;
+    }
 }
 
 .playground {
     align-content: center;
     background-image: url('./pics/playground-bg.jpg');
-    border: 10px solid $playground-border-color;
+    border: 10px solid $border-color;
     border-radius: 50px;
     box-sizing: border-box;
     display: flex;
@@ -26,9 +32,12 @@
     justify-content: center;
     margin-top: 10%;
     margin-left: 20px;
+    position: relative;
     width: calc(100vw - 40px);
 
-    position: relative;
+    @media screen and (max-height: 500px) {
+        margin-top: 5%;
+    }
 }
 .cell {
    height: 31%; 
@@ -37,7 +46,7 @@
 }
 .card {
     background-image: url('./pics/card-bg.png');
-    border: 3px solid $playground-border-color;
+    border: 3px solid $border-color;
     border-radius: 15%;
     box-sizing: border-box;
     color: $text-color;
@@ -47,19 +56,41 @@
     padding: 30% 0; 
     text-align: center;
     text-shadow: 0 0 10px $text-shadow-color;
-    width: 100%;   
+    user-select: none;
+    width: 100%; 
 }
 
 .draggable {
+    box-shadow: inset 0 0 20px $inset-shadow-color;
     position: absolute;
     z-index: 100;
+   
 }
 
 .game-end-popup {
     @extend .draggable;
+    box-shadow: none;
     color: $text-color;
     font-family: $font-family;
     font-size: 40px;
     text-shadow: 0 0 10px $text-shadow-color;
     top: 40%;
+}
+
+.start-btn {
+    background-image: url('./pics/card-bg.png');
+    border: 5px solid $border-color;
+    border-radius: 25px;
+    color: $text-color;
+    display: block;
+    font-family: $font-family;
+    font-size: 20px;
+    margin: 35px auto;
+    outline: none;
+    padding: 15px;
+    user-select: none;
+
+    &:active {
+        box-shadow: inset 0 0 10px $inset-shadow-color;
+    }
 }

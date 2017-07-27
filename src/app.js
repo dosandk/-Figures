@@ -1,5 +1,6 @@
 import './main.scss';
-//import '../manifest.json';
+import {startBtn} from './js/domElements';
 import {startNewGame} from './js/playgroundGenerating';
 
 startNewGame();
+startBtn.addEventListener('click', startNewGame);
