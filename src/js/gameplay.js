@@ -2,7 +2,7 @@ import {playground} from './domElements';
 import {initialArr} from './playgroundGenerating';
 import {getDirection, move, detectEndOfGame} from './utils';
 
- playground.addEventListener('touchstart', event => {
+function handler (event) {
     const [targetEvent] = event.targetTouches;
     let {target} = targetEvent;
 
@@ -70,9 +70,14 @@ import {getDirection, move, detectEndOfGame} from './utils';
             }
         }
     }
- });
+ }
 
 function endGame () {
     const template = '<div class="game-end-popup">Well Done!</div>';
     playground.insertAdjacentHTML('beforeend', template);
+    playground.removeEventListener('touchstart', handler);
+}
+
+export {
+    handler,
 }

@@ -1,5 +1,5 @@
 import {playground} from './domElements';
-import './gameplay';
+import {handler} from './gameplay';
 
 const size = 9;
 let initialArr = [];
@@ -7,6 +7,7 @@ let initialArr = [];
 function startNewGame(){
     playground.innerHTML = '';
     generatePlayground();
+    playground.addEventListener('touchstart', handler);
 }
 
 function generatePlayground(){
