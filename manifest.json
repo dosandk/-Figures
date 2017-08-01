@@ -1,0 +1,28 @@
+{
+    "short_name": "Figures",
+    "name": "Figures Game",
+    "display": "standalone",
+    "background_color": "#6ee8fb",
+    "start_url": ".",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./pics/logo48.png",
+            "type": "image/png",
+            "sizes": "48x48"},
+        {
+            "src": "./pics/logo96.png",
+            "type": "image/png",
+            "sizes": "96x96"},
+        {
+            "src": "./pics/logo144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "./pics/logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}
