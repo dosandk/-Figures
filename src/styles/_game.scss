@@ -2,6 +2,11 @@
     background-image: url('./pics/background.png');
     background-size: cover;
     height: 100%;
+
+    @media screen and (min-width: 1025px) {
+        max-width: 900px;
+        margin: auto;
+    }
 }
 
 .title {
@@ -17,6 +22,10 @@
     @media screen and (max-height: 500px) {
         font-size: 30px;
         padding-top: 5%;
+    }
+
+    @media screen and (min-width: 750px) {
+            padding-top: 6%;
     }
 }
 
@@ -36,6 +45,16 @@
     width: calc(100vw - 40px);
 
     @media screen and (max-height: 500px) {
+        margin-top: 3%;
+    }
+    @media screen and (min-width: 750px) {
+        margin-top: 5%;
+    }
+
+    @media screen and (min-width: 1025px) {
+        height: 60%;
+        width: 60%;
+        margin: auto;
         margin-top: 5%;
     }
 }
