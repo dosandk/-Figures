@@ -1,12 +1,12 @@
 const cacheName = 'cache1';
 const files = [
     '/',
-    '/assets/styles.css',
-    '/assets/bundle.js',
-    '/assets/2fe50a9950b967b53bc895400b8bb581.png',
-    '/assets/513b423513a6b6cf36f3afe0e5efaf26.png',
-    '/assets/f3f456526fe94d00846f6f88c909574e.jpg',
-    '/assets/71cf47ef3775ddcf318faecb3ab7bbd6.ico',
+    '/styles.css',
+    '/bundle.js',
+    '/2fe50a9950b967b53bc895400b8bb581.png',
+    '/513b423513a6b6cf36f3afe0e5efaf26.png',
+    '/f3f456526fe94d00846f6f88c909574e.jpg',
+    '/71cf47ef3775ddcf318faecb3ab7bbd6.ico',
     '/index.html',
     'https://fonts.googleapis.com/css?family=Gorditas:400,700'
 ];
@@ -32,7 +32,7 @@ self.addEventListener('activate', event => {
                 if (!cacheWhiteList.includes(cacheName)) return caches.delete(cacheName);
             })
         ))
-    )   
+    )
 })
 
 self.addEventListener('fetch', event => {
