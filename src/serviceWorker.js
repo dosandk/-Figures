@@ -23,15 +23,16 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
     console.log('I am working service worker on activating phase');
+    self.clients.claim();
     const cacheWhiteList = [cacheName];
     event.waitUntil(
         caches.keys()
         .then(cacheNames => Promise.all(
             cacheNames.map(cacheName => {
-                if(cacheWhiteList.indexOf(cacheName) === -1) return caches.delete(cacheName)
+                if (!cacheWhiteList.includes(cacheName)) return caches.delete(cacheName);
             })
         ))
-    )
+    )   
 })
 
 self.addEventListener('fetch', event => {
@@ -41,15 +42,18 @@ self.addEventListener('fetch', event => {
             console.log('Found ', event.request.url, ' in cache');
             return response;
         }
-      console.log('Network request for ', event.request.url);
-      return fetch(event.request)
-      .then(response => {
-          return caches.open(cacheName)
-          .then(cache => {
-              cache.put(event.request.url, response.clone());
-              return response;
+        console.log('Network request for ', event.request.url);
+
+        return fetch(event.request)
+            .then(response => {
+                caches.open(cacheName)
+                    .then(cache => {
+                        cache.put(event.request.url, response);
+                    })
+                    .catch(err => console.error(err));
+
+                return response.clone();
             })
-      })
         }).catch(err => console.error(err))
     )
 })

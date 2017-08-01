@@ -45,7 +45,7 @@
     width: calc(100vw - 40px);
 
     @media screen and (max-height: 500px) {
-        margin-top: 5%;
+        margin-top: 3%;
     }
     @media screen and (min-width: 750px) {
         margin-top: 5%;
@@ -55,6 +55,7 @@
         height: 60%;
         width: 60%;
         margin: auto;
+        margin-top: 5%;
     }
 }
 .cell {
