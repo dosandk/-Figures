@@ -6,21 +6,21 @@ module.exports  = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         index: './app.js'
-    },    
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/assets/', 
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'src'),
-        port: 4200
+        port: 4200,
+        publicPath: '/assets/'
     },
     module: {
         rules: [
             { test: /\.js$/, use: ['babel-loader'], exclude: /node_modules/ },
-            { 
-                test: /\.scss$/, 
+            {
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: "css-loader!sass-loader",

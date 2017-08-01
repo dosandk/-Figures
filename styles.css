@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Gorditas:400,700);/*RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Gorditas', cursive;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html, body {
+  background-color: #6ee8fb;
+  line-height: 1;
+  height: 100%; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrapper {
+  background-image: url(2fe50a9950b967b53bc895400b8bb581.png);
+  background-size: cover;
+  height: 100%; }
+  @media screen and (min-width: 1025px) {
+    .wrapper {
+      max-width: 900px;
+      margin: auto; } }
+
+.title {
+  color: #fff;
+  font-family: 'Gorditas', cursive;
+  font-size: 40px;
+  padding: 10px;
+  padding-top: 10%;
+  text-align: center;
+  text-shadow: 0 0 10px #000;
+  user-select: none; }
+  @media screen and (max-height: 500px) {
+    .title {
+      font-size: 30px;
+      padding-top: 5%; } }
+  @media screen and (min-width: 750px) {
+    .title {
+      padding-top: 6%; } }
+
+.playground {
+  align-content: center;
+  background-image: url(f3f456526fe94d00846f6f88c909574e.jpg);
+  border: 10px solid #a58456;
+  border-radius: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vw - 40px);
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 20px;
+  position: relative;
+  width: calc(100vw - 40px); }
+  @media screen and (max-height: 500px) {
+    .playground {
+      margin-top: 3%; } }
+  @media screen and (min-width: 750px) {
+    .playground {
+      margin-top: 5%; } }
+  @media screen and (min-width: 1025px) {
+    .playground {
+      height: 60%;
+      width: 60%;
+      margin: auto;
+      margin-top: 5%; } }
+
+.cell {
+  height: 31%;
+  width: 31%;
+  position: relative; }
+
+.card {
+  background-image: url(513b423513a6b6cf36f3afe0e5efaf26.png);
+  border: 3px solid #a58456;
+  border-radius: 15%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Gorditas", cursive;
+  font-size: 30px;
+  height: 100%;
+  padding: 30% 0;
+  text-align: center;
+  text-shadow: 0 0 10px #000;
+  user-select: none;
+  width: 100%; }
+
+.draggable, .game-end-popup {
+  box-shadow: inset 0 0 20px #54240d;
+  position: absolute;
+  z-index: 100; }
+
+.game-end-popup {
+  box-shadow: none;
+  color: #fff;
+  font-family: "Gorditas", cursive;
+  font-size: 40px;
+  text-shadow: 0 0 10px #000;
+  top: 40%; }
+
+.start-btn {
+  background-image: url(513b423513a6b6cf36f3afe0e5efaf26.png);
+  border: 5px solid #a58456;
+  border-radius: 25px;
+  color: #fff;
+  display: block;
+  font-family: "Gorditas", cursive;
+  font-size: 20px;
+  margin: 35px auto;
+  outline: none;
+  padding: 15px;
+  user-select: none; }
+  .start-btn:active {
+    box-shadow: inset 0 0 10px #54240d; }
