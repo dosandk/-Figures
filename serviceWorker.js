@@ -1,13 +1,13 @@
 const cacheName = 'cache1';
 const files = [
-    '/',
-    '/styles.css',
-    '/bundle.js',
-    '/2fe50a9950b967b53bc895400b8bb581.png',
-    '/513b423513a6b6cf36f3afe0e5efaf26.png',
-    '/f3f456526fe94d00846f6f88c909574e.jpg',
-    '/71cf47ef3775ddcf318faecb3ab7bbd6.ico',
-    '/index.html',
+    '/-Figures/',
+    '/-Figures/styles.css',
+    '/-Figures/bundle.js',
+    '/-Figures/2fe50a9950b967b53bc895400b8bb581.png',
+    '/-Figures/513b423513a6b6cf36f3afe0e5efaf26.png',
+    '/-Figures/f3f456526fe94d00846f6f88c909574e.jpg',
+    '/-Figures/71cf47ef3775ddcf318faecb3ab7bbd6.ico',
+    '/-Figures/index.html',
     'https://fonts.googleapis.com/css?family=Gorditas:400,700'
 ];
 
