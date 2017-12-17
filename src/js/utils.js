@@ -18,6 +18,24 @@ function move (el, arr) {
     arr[emptyIndex] = elId;
 }
 
+function inversions(position) {
+    let inversionsNumber = 0;
+    const positionWithoutZero = position.filter(x => x !== 0);
+    const {length} = positionWithoutZero;
+    for (let i = 0; i < length; i++) {
+        for (let j = i + 1; j < length; j++) {
+            if (positionWithoutZero[i] > positionWithoutZero[j]) {
+                inversionsNumber++;
+            }
+        }
+    }
+    return inversionsNumber;
+}
+
+function isStartPositionSolvable(position) {
+    return inversions(position) % 2 === 0;
+}
+
 function detectEndOfGame(arr){
     const resultArr = arr.map((num, i) =>{
         if (num !== 0){
@@ -35,4 +53,5 @@ export {
     getDirection,
     move,
     detectEndOfGame,
+    isStartPositionSolvable
 }

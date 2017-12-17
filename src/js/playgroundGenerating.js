@@ -1,5 +1,6 @@
 import {playground} from './domElements';
 import {handler} from './gameplay';
+import {isStartPositionSolvable} from './utils';
 
 const size = 9;
 let initialArr = [];
@@ -13,6 +14,9 @@ function startNewGame(){
 function generatePlayground(){
     let template = '';
     initialArr = randomizer(size);
+    while (!isStartPositionSolvable(initialArr)) {
+        initialArr = randomizer(size);
+    }
     initialArr.forEach((item, i) => template += card(item, i));
     playground.insertAdjacentHTML("beforeend", template);
 }
